@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <form class="message-input">
+            <input type="file" id="fileInput" class="file-upload">
+            <textarea id="inp" name="message" placeholder="Message" class="message-box" rows="1" oninput="autoGrow(this)" onkeydown="handleKeyDown(event)"></textarea>
+            <button class="send-button" id="sendButton">
+                <span>&uarr;</span>
+            </button>
+        </form>
+    </div>
+    
+    <div class="request-container">
+        <div class="three-cont">
+            <div class="wrapper">
+                <h3 class="answer-header">GPT</h3>
+                <div class="message-display">
+                    <p class="answer_box" id = "gpt"></p>
+                </div>
+            </div>
+            
+            <div class="wrapper">
+                <h3 class="answer-header">GEMINI</h3>
+                <div class="message-display">
+                    <p class="answer_box" id = "gemini"></p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <h3 class="answer-header">CLAUDE</h3>
+                <div class="message-display">
+                    <p class="answer_box" id = "claude"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="question-display1">
+            <div class="question-display"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
