@@ -34,7 +34,7 @@ body {
 }
 
 .message-box {
-    max-height: 70px;
+    max-height: 40px;
     flex-grow: 1;
     background-color: #444;
     color: #fff;
@@ -99,7 +99,7 @@ body {
 .question-display {
     background-color: #333;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #fff;
     max-width: 1000px;
     word-wrap: break-word;
