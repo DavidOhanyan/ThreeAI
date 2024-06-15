@@ -46,25 +46,25 @@ btn.addEventListener('click', function(event) {
 
 ///////////////////////////////////////////
 
-    fetch('/gemini', {
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        method: 'POST',
-        body: JSON.stringify({'message':msg})
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Write a question');
-        }
-        return response.json();
-    })
-    .then(data => {
-        gemini_field.innerHTML = `<p>${data.answer}</p>`
-    })
-    .catch((error) => {
-        quest_filed.textContent = `Error happend:${error}`;
-    });
+    // fetch('/gemini', {
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     method: 'POST',
+    //     body: JSON.stringify({'message':msg})
+    // })
+    // .then(response => {
+    //     if (!response.ok) {
+    //         throw new Error('Write a question');
+    //     }
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     gemini_field.innerHTML = `<p>${data.answer}</p>`
+    // })
+    // .catch((error) => {
+    //     quest_filed.textContent = `Error happend:${error}`;
+    // });
 
 ///////////////////////////////////////////
 
