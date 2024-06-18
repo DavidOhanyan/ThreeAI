@@ -2,11 +2,11 @@ from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
 import google.generativeai as genai
 import anthropic
+import os
 
-
-GEMINI_API_KEY = open('API-Keys/Gemini-Key', 'r').read()
-OPENAI_API_KEY = open('API-Keys/Gpt-Key', 'r').read()
-CLAUDE_API_KEY = open('API-Keys/Claude-Key', 'r').read()
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+CLAUDE_API_KEY = os.environ.get('CLAUDE_API_KEY')
 
 gpt = OpenAI(api_key=OPENAI_API_KEY)
 gemini = genai.configure(api_key=GEMINI_API_KEY)
